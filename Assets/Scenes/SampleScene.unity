@@ -642,11 +642,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &582709727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4524569724706301079, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
-  m_PrefabInstance: {fileID: 4524569723987327093}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,10 +1343,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2998853236359598652, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
-      propertyPath: _root
-      value: 
-      objectReference: {fileID: 4524569723987327095}
     - target: {fileID: 3652018286348859990, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
       propertyPath: _detectionZone
       value: 3.88
@@ -1404,6 +1395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4524569725078075363, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4144771097149450018, guid: 03e47513d961bd94e94c81f0e605c24f, type: 3}
     m_RemovedComponents:
     - {fileID: 5142427277715291323, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
@@ -1412,24 +1407,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4524569724706301078, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
   m_PrefabInstance: {fileID: 4524569723987327093}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &4524569723987327095
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582709727}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

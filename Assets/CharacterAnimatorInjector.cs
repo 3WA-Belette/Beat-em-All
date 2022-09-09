@@ -33,8 +33,10 @@ public class CharacterAnimatorInjector : MonoBehaviour
     void AttackEvent() => _animator.SetTrigger(_attackTrigger);
     void DamageEvent() => _animator.SetTrigger(_damageTrigger);
 
-    private void Update()
+    void LateUpdate()
     {
+        Debug.Log($"Is Walking : {_movement.IsWalking}");
+
         _animator.SetBool(_isWalkingBool, _movement.IsWalking);
         _animator.SetBool(_isDeadBool, _health.IsDead);
     }

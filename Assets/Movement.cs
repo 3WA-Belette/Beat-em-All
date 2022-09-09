@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,20 +10,17 @@ public class Movement : MonoBehaviour
     [SerializeField] float _walkSpeed;
 
     public bool IsWalking => _appliedVector.magnitude > 0.1f;
+    public float WalkDistance => _appliedVector.magnitude;
 
     Vector2 _directionAsked;
     Vector2 _appliedVector;
 
-    private void Update()
+    void Update()
     {
         _directionAsked.Normalize();
-
         _appliedVector = _directionAsked * Time.fixedDeltaTime * _walkSpeed;
-
         _root.MovePosition(_root.position + _appliedVector);
-
     }
-
 
     public void SetDirection(Vector2 vector2)
     {
