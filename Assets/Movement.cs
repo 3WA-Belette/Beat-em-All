@@ -9,16 +9,15 @@ public class Movement : MonoBehaviour
     [SerializeField] Rigidbody2D _root;
     [SerializeField] float _walkSpeed;
 
-    public bool IsWalking => _appliedVector.magnitude > 0.1f;
+    public bool IsWalking => _appliedVector.magnitude > 0.01f;
     public float WalkDistance => _appliedVector.magnitude;
 
     Vector2 _directionAsked;
     Vector2 _appliedVector;
 
-    void Update()
+    void FixedUpdate()
     {
-        _directionAsked.Normalize();
-        _appliedVector = _directionAsked * Time.fixedDeltaTime * _walkSpeed;
+        _appliedVector = _directionAsked.normalized * Time.fixedDeltaTime * _walkSpeed;
         _root.MovePosition(_root.position + _appliedVector);
     }
 

@@ -35,8 +35,6 @@ public class CharacterAnimatorInjector : MonoBehaviour
 
     void LateUpdate()
     {
-        Debug.Log($"Is Walking : {_movement.IsWalking}");
-
         _animator.SetBool(_isWalkingBool, _movement.IsWalking);
         _animator.SetBool(_isDeadBool, _health.IsDead);
     }
