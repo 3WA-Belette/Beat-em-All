@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _root: {fileID: 0}
-  _walkSpeed: 0
+  _walkSpeed: 5
 --- !u!114 &5869414187649327004
 MonoBehaviour:
   m_ObjectHideFlags: 0
