@@ -29,20 +29,20 @@ public class BasicAI : MonoBehaviour
         _attackCooldownRuntime -= Time.deltaTime;
 
         float distance = Vector3.Distance(_targetedPlayer.position, transform.position);
-        if (distance < _attackThreshold)
+        if (distance < _attackThreshold)    // Le joueur est dans la zone bleue
         {
-            if(_attackCooldownRuntime<=0)
+            if(_attackCooldownRuntime<=0)  // Le sablier a atteind sa durée limite
             {
                 _attack.LaunchAttack();
-                _attackCooldownRuntime = _attackCooldown;
+                _attackCooldownRuntime = _attackCooldown;   // On rempli le sablier
             }
             _movement.SetDirection(Vector2.zero);
         }
-        else if(distance < _moveThreshold)
+        else if(distance < _moveThreshold)  // Le joueur est dans la zone jaune
         {
             _movement.SetDirection(_targetedPlayer.position-transform.position);
         }
-        else
+        else     // Le joueur est hors de vue
         {
             _movement.SetDirection(Vector2.zero);
         }
