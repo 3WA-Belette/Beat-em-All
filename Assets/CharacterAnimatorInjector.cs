@@ -15,28 +15,31 @@ public class CharacterAnimatorInjector : MonoBehaviour
     [Header("Parameters")]
     [SerializeField] string _attackTrigger;
     [SerializeField] string _damageTrigger;
+    [SerializeField] string _onDeadTrigger;
     [SerializeField] string _isWalkingBool;
-    [SerializeField] string _isDeadBool;
 
     private void Start()
     {
         _attack.OnAttack += AttackEvent;
         _health.OnDamage += DamageEvent;
+        _health.OnDie += DieEvent;
+
     }
 
     private void OnDestroy()
     {
         _attack.OnAttack -= AttackEvent;
         _health.OnDamage -= DamageEvent;
+        _health.OnDie -= DieEvent;
     }
 
+    void DieEvent() => _animator.SetTrigger(_onDeadTrigger);
     void AttackEvent() => _animator.SetTrigger(_attackTrigger);
     void DamageEvent() => _animator.SetTrigger(_damageTrigger);
 
     void LateUpdate()
     {
         _animator.SetBool(_isWalkingBool, _movement.IsWalking);
-        _animator.SetBool(_isDeadBool, _health.IsDead);
     }
 
     #region EDITOR
@@ -55,8 +58,8 @@ public class CharacterAnimatorInjector : MonoBehaviour
         // Reset params
         _attackTrigger = "OnAttack";
         _damageTrigger = "OnDamage";
+        _onDeadTrigger = "OnDead";
         _isWalkingBool = "IsWalking";
-        _isDeadBool = "IsDead";
     }
 #endif
     #endregion

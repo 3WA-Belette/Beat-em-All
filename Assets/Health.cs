@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,11 +10,12 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int _startHealth;
     [SerializeField] int _maxHealth;
+    [SerializeField] UnityEvent _onDie;
 
     public event UnityAction OnDamage;
     public event UnityAction OnDie;
 
-    public int CurrentHealth { get; private set; }
+    [ShowNativeProperty] public int CurrentHealth { get; private set; }
 
     public bool IsDead => CurrentHealth <= 0;
 
@@ -26,6 +28,10 @@ public class Health : MonoBehaviour
     {
         CurrentHealth--;    // TMP
         OnDamage?.Invoke();
-    }
 
+        if(IsDead)
+        {
+            OnDie?.Invoke();
+        }
+    }
 }
