@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 969295927701102999}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &566123226733298834
 MonoBehaviour:
@@ -48,6 +48,8 @@ MonoBehaviour:
   _targetedPlayer: {fileID: 0}
   _movement: {fileID: 1884528375939127101}
   _attack: {fileID: 7119479252385897117}
+  _attackThreshold: 0
+  _moveThreshold: 0
 --- !u!1001 &3727047223574283521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +57,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2998853236359598652, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
+      propertyPath: _walkSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4524569724706301078, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
       propertyPath: m_RootOrder
       value: 0

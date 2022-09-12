@@ -1340,31 +1340,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8968da63b65e0bf46bf9a632e7429535, type: 3}
---- !u!1 &1969201875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5332228333436799952, guid: 8968da63b65e0bf46bf9a632e7429535, type: 3}
-  m_PrefabInstance: {fileID: 1969201874}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1969201876
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969201875}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1969201880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5332228333436799953, guid: 8968da63b65e0bf46bf9a632e7429535, type: 3}
@@ -1466,6 +1441,22 @@ PrefabInstance:
     - target: {fileID: 78728312851906391, guid: a28a298882e51304ba99ea2db6bbb7d0, type: 3}
       propertyPath: _onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 566123226733298834, guid: a28a298882e51304ba99ea2db6bbb7d0, type: 3}
+      propertyPath: _moveThreshold
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 566123226733298834, guid: a28a298882e51304ba99ea2db6bbb7d0, type: 3}
+      propertyPath: _attackCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 566123226733298834, guid: a28a298882e51304ba99ea2db6bbb7d0, type: 3}
+      propertyPath: _targetedPlayer
+      value: 
+      objectReference: {fileID: 1969201880}
+    - target: {fileID: 566123226733298834, guid: a28a298882e51304ba99ea2db6bbb7d0, type: 3}
+      propertyPath: _attackThreshold
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 969295927701102998, guid: a28a298882e51304ba99ea2db6bbb7d0, type: 3}
       propertyPath: m_Name

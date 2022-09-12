@@ -18,6 +18,18 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         _appliedVector = _directionAsked.normalized * Time.fixedDeltaTime * _walkSpeed;
+        if(_appliedVector.magnitude < 0.01f)
+        {
+            // Nothing
+        }
+        else if(_appliedVector.x < 0)
+        {
+            _root.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            _root.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
         _root.MovePosition(_root.position + _appliedVector);
     }
 
