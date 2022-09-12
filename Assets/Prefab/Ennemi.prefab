@@ -50,6 +50,7 @@ MonoBehaviour:
   _attack: {fileID: 7119479252385897117}
   _attackThreshold: 0
   _moveThreshold: 0
+  _attackCooldown: 0
 --- !u!1001 &3727047223574283521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109,6 +110,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ennemi
       objectReference: {fileID: 0}
+    - target: {fileID: 4524569725078075361, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: d6eda0bb993109244aa23c4721090961, type: 2}
+    - target: {fileID: 4524569725078075363, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -899841443580027872, guid: b3e0b15a616234343a8293a978fcf1a3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d395dbaa97b90f40aef539ba776323d, type: 3}
 --- !u!4 &969295927701102999 stripped

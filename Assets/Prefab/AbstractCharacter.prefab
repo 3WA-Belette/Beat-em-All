@@ -317,7 +317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1546271943, guid: 41117c99b451d4c2e80c29c12bb89370, type: 3}
+  m_Sprite: {fileID: -4144771097149450018, guid: 03e47513d961bd94e94c81f0e605c24f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -347,8 +347,8 @@ MonoBehaviour:
   _health: {fileID: 3652018286348859990}
   _attackTrigger: OnAttack
   _damageTrigger: OnDamage
+  _onDeadTrigger: 
   _isWalkingBool: IsWalking
-  _isDeadBool: IsDead
 --- !u!1 &4551324734239849217
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startHealth: 20
   _maxHealth: 20
+  _onDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5221956581467389324
 GameObject:
   m_ObjectHideFlags: 0
