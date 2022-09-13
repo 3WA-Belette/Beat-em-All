@@ -17,6 +17,11 @@ public class Health : MonoBehaviour
 
     [ShowNativeProperty] public int CurrentHealth { get; private set; }
 
+    public int MyHPProgress
+    {
+        get { return CurrentHealth/ _maxHealth; }
+    }
+
     public bool IsDead => CurrentHealth <= 0;
 
     private void Start()
