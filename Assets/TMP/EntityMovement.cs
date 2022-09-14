@@ -69,6 +69,7 @@ public class EntityMovement : MonoBehaviour
         }
 
         _rb.MovePosition(transform.position + calculatedDirection);
+
     }
 
     #region EDITOR
