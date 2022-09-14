@@ -47,6 +47,7 @@ public class EntityMovement : MonoBehaviour
     {
         _speed = 5f;
     }
+
     #endregion
 
 }
