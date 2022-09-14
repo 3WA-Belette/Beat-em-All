@@ -13,7 +13,22 @@ public class EntityAttack : MonoBehaviour
 
         _animator.SetTrigger("Attack");
 
-        _hitBox.LaunchAttack();
+        // Method Raycast
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right), Color.yellow, 1f);
+
+        Ray ray = new Ray(transform.position, transform.TransformDirection(Vector2.right));
+        RaycastHit[] hits = Physics.RaycastAll(ray, 2f, LayerMask.GetMask("Attackable"));
+        foreach(RaycastHit h in hits)
+        {
+            if(h.collider.TryGetComponent<EntityHealth>(out var health))
+            {
+                health.Damage(5);
+            }
+        }
+
+
+        // Method Hitbox
+        //_hitBox.LaunchAttack();
 
     }
 

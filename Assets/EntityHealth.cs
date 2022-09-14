@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
 
 public class EntityHealth : MonoBehaviour
 {
     // Nos champs
     [SerializeField] int _maxHealth;
+    [SerializeField] Animator _animator;
+    [SerializeField] GameObject _root;
+
+    [SerializeField] UnityEvent _onDamage;
+    [SerializeField] UnityEvent _onDie;
+
     int _currentHealth;
 
     // Propriété pour rendre les informations disponibles aux autres composants
@@ -45,8 +52,33 @@ public class EntityHealth : MonoBehaviour
         // Securité MAX Health
         _currentHealth = Mathf.Max(_currentHealth, 0);  // ex : -10 , 0
 
+        _onDamage.Invoke();
+        _animator.SetTrigger("Hurt");
+
+        if (_currentHealth <= 0)
+        {
+            _onDie.Invoke();
+            _animator.SetBool("IsDead", true);
+            StartCoroutine(WaitBeforeDestroy());
+        }
+
         Debug.Log($"DAMAGE, {_currentHealth}");
     }
+
+    IEnumerator WaitBeforeDestroy()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(_root);
+    }
+
+    bool _isCooldown;
+    IEnumerator Cooldown()
+    {
+        _isCooldown = true;
+        yield return new WaitForSeconds(2f);
+        _isCooldown = false;
+    }
+
 
     /// <summary>
     /// On gagne de la vie
@@ -69,7 +101,6 @@ public class EntityHealth : MonoBehaviour
         
         Debug.Log($"Regen, {_currentHealth}");
     }
-
 
     #region EDITOR
 #if UNITY_EDITOR

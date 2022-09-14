@@ -25,6 +25,8 @@ public class EntityMovement : MonoBehaviour
         _direction = direction.normalized;
     }
 
+
+
     public void SetRunning(bool state)
     {
         _isRunning = state;
