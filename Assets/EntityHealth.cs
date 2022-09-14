@@ -70,4 +70,14 @@ public class EntityHealth : MonoBehaviour
         Debug.Log($"Regen, {_currentHealth}");
     }
 
+
+    #region EDITOR
+#if UNITY_EDITOR
+    private void Reset()
+    {
+        _maxHealth = 20;
+    }
+#endif
+    #endregion
+
 }

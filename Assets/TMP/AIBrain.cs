@@ -32,7 +32,7 @@ public class AIBrain : MonoBehaviour
             if(distanceToPlayer < _limitDistance)// Joueur trop proche
             {
                 _movement.SetDirection(Vector2.zero);
-                _attack.LaunchAttack();
+                //_attack.LaunchAttack();
             }
             else
             {

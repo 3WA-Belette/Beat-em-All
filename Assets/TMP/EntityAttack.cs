@@ -5,12 +5,15 @@ using UnityEngine;
 public class EntityAttack : MonoBehaviour
 {
     [SerializeField] Animator _animator;
+    [SerializeField] HitBox _hitBox;
 
     public void LaunchAttack()
     {
         Debug.Log($"{transform.parent.name} : OH MY GOD");
 
         _animator.SetTrigger("Attack");
+
+        _hitBox.LaunchAttack();
 
     }
 
