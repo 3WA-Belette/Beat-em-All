@@ -48,6 +48,7 @@ MonoBehaviour:
   _animator: {fileID: 2555986676870745334}
   _rb: {fileID: 2555986677857153735}
   _speed: 5
+  _speedRun: 1.5
 --- !u!114 &7184727546456011415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,9 +318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveInput: {fileID: 3870977259911028607, guid: d3382ea32a9cbf64eb9992dee2fb5a32, type: 3}
+  _sprintInput: {fileID: -3441178443401500529, guid: d3382ea32a9cbf64eb9992dee2fb5a32, type: 3}
   _attackInput: {fileID: 8412680932041333766, guid: d3382ea32a9cbf64eb9992dee2fb5a32, type: 3}
   _movement: {fileID: 137143022973893431}
-  _attack: {fileID: 0}
+  _attack: {fileID: 7184727546456011415}
 --- !u!114 &1878092740454126873
 MonoBehaviour:
   m_ObjectHideFlags: 0
